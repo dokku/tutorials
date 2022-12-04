@@ -94,6 +94,12 @@ nav:
   - Blog:
     - https://dokku.com/blog/
   - Tutorials:
-    - https://dokku.com/tutorials/
+    - index.md
+    - apps:
+      - apps/deploying-gogs-to-dokku.md
+    - automation:
+      - automation/automating-dokku-setup.md
+    - plugins:
+      - plugins/creating-a-datastore-plugin.md
   - Purchase Dokku Pro:
     - https://dokku.dpdcart.com/cart/add?product_id=217344&method_id=236878
