@@ -95,11 +95,11 @@ nav:
     - https://dokku.com/blog/
   - Tutorials:
     - index.md
-    - apps:
+    - Apps:
       - apps/deploying-gogs-to-dokku.md
-    - automation:
+    - Automation:
       - automation/automating-dokku-setup.md
-    - plugins:
+    - Plugins:
       - plugins/creating-a-datastore-plugin.md
   - Purchase Dokku Pro:
     - https://dokku.dpdcart.com/cart/add?product_id=217344&method_id=236878
