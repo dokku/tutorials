@@ -41,6 +41,15 @@ This tutorial goes through the process of provisioning an app via ansible.
 
   [Automating Dokku Application Setup with Ansible]: automation/automating-dokku-setup.md
 
+## [Run on an External Volume]
+
+In order to leverage cloud-provider facilities like _attachable volumes_, (_a.k.a. block storage_)
+the following is an easy tutorial to achieve Dokku runs on them.
+
+  [:octicons-arrow-right-24: Continue reading][Run on an External Volume]
+
+  [Run on an External Volume]: other/run-on-external-volume.md
+
 ## [Deploying Gogs to Dokku]
 
 Hot off the release of Dokku 0.6.3, here is a sweet tutorial made possible by the new port handling feature of Dokku.

@@ -101,5 +101,7 @@ nav:
       - automation/automating-dokku-setup.md
     - Plugins:
       - plugins/creating-a-datastore-plugin.md
+    - Other:
+      - other/run-on-external-volume.md
   - Purchase Dokku Pro:
     - https://dokku.dpdcart.com/cart/add?product_id=217344&method_id=236878
