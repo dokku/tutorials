@@ -19,7 +19,7 @@ markdown_extensions:
       alternate_style: true
   - tables
 
-repo_url: https://github.com/dokku/dokku
+repo_url: https://github.com/dokku/tutorials
 
 site_dir: tutorials
 site_name: Dokku Tutorials
