@@ -2,7 +2,7 @@ APP_NAME ?= tutorials
 
 .PHONY: docs-build-image
 docs-build-image:
-	 docker build -f _build/Dockerfile --progress plain -t app/mkdocs-$(APP_NAME) .
+	docker build -f _build/Dockerfile --progress plain -t app/mkdocs-$(APP_NAME) .
 
 .PHONY: docs-build
 docs-build:
