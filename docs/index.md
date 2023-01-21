@@ -25,6 +25,14 @@ search:
 
 # Tutorials
 
+## [Deploying an image without a registry]
+
+Deploying an image does not always require a remote registry, as shown in this short tutorial.
+
+  [:octicons-arrow-right-24: Continue reading][Deploying an image without a registry]
+
+  [Deploying an image without a registry]: other/deploying-an-image-without-a-registry.md
+
 ## [Creating a Datastore plugin]
 
 Ever wanted to write a datastore plugin? This tutorial shows how we create official datastore plugins.

@@ -102,6 +102,7 @@ nav:
     - Plugins:
       - plugins/creating-a-datastore-plugin.md
     - Other:
+      - other/deploying-an-image-without-a-registry.md
       - other/run-on-external-volume.md
   - Purchase Dokku Pro:
     - https://dokku.dpdcart.com/cart/add?product_id=217344&method_id=236878

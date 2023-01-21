@@ -1,6 +1,6 @@
 ---
 title:  "Deploying an image without a registry"
-date:   2017-10-27 08:01:00 -0400
+date:   2023-01-20 22:39:00 -0400
 categories: general
 tags:
   - dokku
