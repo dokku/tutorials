@@ -19,9 +19,10 @@ To deploy an image from CI without an intermediate registry, we can run the foll
 First, we'll assume the image is built. The following is one example for building a docker image, though your setup may vary. The image repository _must not_ be `dokku/`, as that namespace is used internally for tagging images by Dokku.
 
 ```shell
-# a good tag to use is the commit sha of your build
 docker image build --tag app/node-js-app:2935cc3d .
 ```
+
+It is recommended to tag your image with a unique tag per build, as otherwise the deployment step becomes tricky. A good tag to use is the commit sha of your build, which is usually provided by your CI provider of choice.
 
 ### Loading the image onto the host
 
@@ -31,7 +32,7 @@ Next, we save the image to a file. This can be done with the `docker image save`
 docker image save --ouput node-js-app.tar
 ```
 
-The image must then be loaded on the remote server. This should be performed with the `docker load` command, and must be performed by a user that has access to the docker daemon. Note that because this command is not exposed by Dokku, a user other than `dokku` must be used for the ssh command.
+The image must then be loaded on the remote server. This should be performed with the `docker load` command, and must be performed by a user that has access to the docker daemon.
 
 ```shell
 cat node-js-app.tar | ssh root@dokku.me "docker load"
@@ -42,6 +43,10 @@ Alternatively, you can save the image and load it in one command like so:
 ```shell
 docker image save | ssh root@dokku.me "docker load"
 ```
+
+!!! warning
+
+    Because this command is not exposed by Dokku, a user other than `dokku` must be used for the ssh command.
 
 ### Deploying the image
 
