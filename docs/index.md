@@ -25,6 +25,14 @@ search:
 
 # Tutorials
 
+## [Using Websockets with Nginx]
+
+Running a sidecar process to serve websocket requests can be done by following this tutorial.
+
+  [:octicons-arrow-right-24: Continue reading][Using Websockets with Nginx]
+
+  [Using Websockets with Nginx]: other/using-websockets-in-dokku.md
+
 ## [Deploying an image without a registry]
 
 Deploying an image does not always require a remote registry, as shown in this short tutorial.
