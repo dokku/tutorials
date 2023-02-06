@@ -8,7 +8,9 @@ tags:
   - websockets
 ---
 
-> Note: The code for this tutorial is available on [Github](https://github.com/dokku/websocket-example)
+!!! note
+
+    The code for this tutorial is available on [Github](https://github.com/dokku/websocket-example)
 
 In many frameworks, a separate process must be run to expose websockets due to the underlying language in use. This tutorial assumes that is the case, and therefore your app is assumed to run two processes, a `web` and a `ws` process. The following is an example Procfile for our `websocket-example` application.
 
@@ -38,18 +40,20 @@ Next, add the following location block to the file. The are two locations that i
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection "upgrade";
 
-    proxy_pass http://{{ $.APP }}-ws-5000;
+    proxy_pass http://{{ $.APP }}-ws;
   }
 ```
 
 In the above `location` block, the path is set to `/echo`. This is the path that the `ws` process responds to requests on. If your path is something else, this can be changed.
 
-Note that the `proxy_pass` line omits a trailing slash (`/`). This allows the request to flow to the `ws` process at `/echo`. If a trailing slash is added, then the request made to the `ws` process will be at `/`. Please see [this stackoverflow answer](https://stackoverflow.com/a/22759570/1515875) for more details on how trailing slashes work with proxy pass.
+!!! warning
+    
+    The `proxy_pass` line omits a trailing slash (`/`). This allows the request to flow to the `ws` process at `/echo`. If a trailing slash is added, then the request made to the `ws` process will be at `/`. Please see [this stackoverflow answer](https://stackoverflow.com/a/22759570/1515875) for more details on how trailing slashes work with proxy pass.
 
 Once the `location` blocks are added, we can add the upstream block at the end of the file. The following upstream block assumes the `ws` process is listening on port `5000`, but this may be changed as appropriate.
 
 ```
-upstream {{ $.APP }}-ws-5000 {
+upstream {{ $.APP }}-ws {
 {{ if not $.DOKKU_APP_WS_LISTENERS }}
   server 127.0.0.1:65535; # force a 502
 {{ else }}
@@ -63,11 +67,11 @@ upstream {{ $.APP }}-ws-5000 {
 
 Note that we use the template variable `$.DOKKU_APP_WS_LISTENERS`, which maps to our `ws` process. If using a different process name, then the variable being listened to would be different. A few examples are below:
 
-| process name | variable                         |
-|--------------|----------------------------------|
-| ws           | $.DOKKU_APP_WS_LISTENERS         |
-| websocket    | $.DOKKU_APP_WEBSOCKET_LISTENERS  |
-| web-socket   | $.DOKKU_APP_WEB_SOCKET_LISTENERS |
+| process name   | variable                           |
+|----------------|------------------------------------|
+| `ws`           | `$.DOKKU_APP_WS_LISTENERS`         |
+| `websocket`    | `$.DOKKU_APP_WEBSOCKET_LISTENERS`  |
+| `web-socket`   | `$.DOKKU_APP_WEB_SOCKET_LISTENERS` |
 
 One thing to note in the above nginx template snippet is the check for the variable `$.DOKKU_APP_WS_LISTENERS`. Without this check, a deploy that doesn't scale up the `ws` process will fail to produce a valid `nginx.conf` file, failing the deploy. The variable will only have a value with there are processes scaled up.
 
