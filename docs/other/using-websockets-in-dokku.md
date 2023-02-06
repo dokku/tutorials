@@ -82,7 +82,7 @@ Note that we use the template variable `$.DOKKU_APP_WS_LISTENERS`, which maps to
 
 One thing to note in the above nginx template snippet is the check for the variable `$.DOKKU_APP_WS_LISTENERS`. Without this check, a deploy that doesn't scale up the `ws` process will fail to produce a valid `nginx.conf` file, failing the deploy. The variable will only have a value with there are processes scaled up.
 
-At this point, assuming the codebase in question is similar to the websocket-tutorial, we can deploy the app and scale up our web processes, allowing websocket connections to flow through to your non-web process.
+At this point, assuming the codebase in question is similar to the websocket-tutorial, we can deploy the app and scale up our `ws` process, allowing websocket connections to flow through to your non-web process.
 
 ```shell
 git push dokku master
