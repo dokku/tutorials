@@ -1,13 +1,24 @@
 ---
 version: 2
 updates:
-  - package-ecosystem: "docker"
-    directory: "/_build"
-    schedule:
-      interval: daily
-    open-pull-requests-limit: 10
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: daily
     open-pull-requests-limit: 10
+    labels:
+      - "type: dependencies"
+  - package-ecosystem: "docker"
+    directory: "/_build"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    labels:
+      - "type: dependencies"
+  - package-ecosystem: pip
+    directory: "/_build"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    labels:
+      - "type: dependencies"
