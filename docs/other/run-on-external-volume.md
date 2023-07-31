@@ -18,6 +18,7 @@ Say, _for instance_, that our volume is mapped into the systems as `/dev/vdb1`.
 Stop docker daemon
 
 ```shell
+systemctl stop docker.socket
 systemctl stop docker
 ```
 
@@ -68,6 +69,7 @@ mount -o bind /mnt/volume/var/lib/docker /var/lib/docker
 Start docker daemon
 
 ```shell
+systemctl start docker.socket
 systemctl start docker
 ```
 
