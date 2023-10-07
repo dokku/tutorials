@@ -7,8 +7,12 @@ on:
     branches:
       - master
 
+concurrency:
+  group: docs-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  docs:
     runs-on: ubuntu-latest
     steps:
       - name: Cloning repo
