@@ -25,6 +25,14 @@ search:
 
 # Tutorials
 
+## [Deploying to a Dokku-managed k3s cluster]
+
+Dokku natively supports both single and multi-server deployments. This tutorial shows how to manage both with k3s under the hood.
+
+  [:octicons-arrow-right-24: Continue reading][Deploying to a Dokku-managed k3s Cluster]
+
+  [Using Websockets with Nginx]: other/deploying-to-k3s.md
+
 ## [Using Websockets with Nginx]
 
 Running a sidecar process to serve websocket requests can be done by following this tutorial.
