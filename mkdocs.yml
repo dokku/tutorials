@@ -104,6 +104,7 @@ nav:
     - Plugins:
       - plugins/creating-a-datastore-plugin.md
     - Other:
+      - other/deploying-to-k3s.md
       - other/deploying-an-image-without-a-registry.md
       - other/run-on-external-volume.md
       - other/using-websockets-in-dokku.md
