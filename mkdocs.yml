@@ -21,6 +21,9 @@ markdown_extensions:
   - toc:
       permalink: true
 
+hooks:
+  - _build/hooks.py
+
 repo_url: https://github.com/dokku/tutorials
 
 site_dir: tutorials
