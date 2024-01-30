@@ -14,7 +14,7 @@ main() {
 
   if [[ "$CMD" == "build" ]]; then
     echo "----> Debug"
-    ls -lah *
+    ls -lah /usr/src/source/*
     echo "----> Write mkdocs"
     write-mkdocs
     echo "----> Executing mkdocs build"
