@@ -3,7 +3,19 @@ import os
 import shutil
 
 
+def mkdir_p(path):
+    """
+    Create a directory if it does not exist.
+    """
+    if os.path.exists(path):
+        return
+    os.mkdir(path)
+
+
 def main():
+    """
+    Copy the docs folder to the app folder.
+    """
     print("----> Copying docs folder")
 
     if os.path.exists("/usr/src/app/docs"):
@@ -11,10 +23,7 @@ def main():
         shutil.rmtree("/usr/src/app/docs")
 
     print("      Performing copy")
-    try:
-        os.mkdir("/usr/src/source/_build")
-    except FileExistsError:
-        pass
+    mkdir_p("/usr/src/app/_build")
     shutil.copytree("/usr/src/source/docs", "/usr/src/app/docs")
     shutil.copy("/usr/src/source/mkdocs.yml", "/usr/src/app/mkdocs.yml")
     shutil.copy("/usr/src/source/_build/hooks.py", "/usr/src/app/_build/hooks.py")

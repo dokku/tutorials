@@ -13,9 +13,6 @@ main() {
   declare CMD="$1" ARGS=("${@:2}")
 
   if [[ "$CMD" == "build" ]]; then
-    echo "----> Debug"
-    ls -lah /usr/src/source/*
-    echo "----> Write mkdocs"
     write-mkdocs
     echo "----> Executing mkdocs build"
     mkdocs build
