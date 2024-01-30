@@ -11,7 +11,7 @@ def main():
         shutil.rmtree("/usr/src/app/docs")
 
     print("      Performing copy")
-    try
+    try:
         os.mkdir("/usr/src/source/_build")
     except FileExistsError:
         pass
