@@ -25,6 +25,14 @@ search:
 
 # Tutorials
 
+## [Connecting to network processes running directly on the host]
+
+Dokku supports connecting deployed applications to processes that expose network connections on the host.
+
+  [:octicons-arrow-right-24: Continue reading][Connecting to network processes running directly on the host]
+
+  [Connecting to network processes running directly on the host]: network/connect-to-host-processes.md
+
 ## [Deploying to a Dokku-managed k3s cluster]
 
 Dokku natively supports both single and multi-server deployments. This tutorial shows how to manage both with k3s under the hood.

@@ -104,6 +104,8 @@ nav:
       - apps/deploying-gogs-to-dokku.md
     - Automation:
       - automation/automating-dokku-setup.md
+    - Network:
+      - network/connect-to-host-processes.md
     - Plugins:
       - plugins/creating-a-datastore-plugin.md
     - Other:
