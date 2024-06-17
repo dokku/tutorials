@@ -25,6 +25,14 @@ search:
 
 # Tutorials
 
+## [Inter-app Communication in Dokku]
+
+Dokku supports cross-container and cross-app communication via custom docker networks
+
+  [:octicons-arrow-right-24: Continue reading][Inter-app Communication in Dokku]
+
+  [Inter-app Communication in Dokku]: network/inter-app-communication.md
+
 ## [Connecting to network processes running directly on the host]
 
 Dokku supports connecting deployed applications to processes that expose network connections on the host.

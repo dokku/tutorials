@@ -106,6 +106,7 @@ nav:
       - automation/automating-dokku-setup.md
     - Network:
       - network/connect-to-host-processes.md
+      - network/inter-app-communication.md
     - Plugins:
       - plugins/creating-a-datastore-plugin.md
     - Other:
