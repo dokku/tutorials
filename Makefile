@@ -12,10 +12,6 @@ docs-build:
 docs-serve:
 	docker run --rm -p 3487:3487 -v "$(PWD):/usr/src/source" --name $(APP_NAME)-serve app/mkdocs-$(APP_NAME) serve
 
-.PHONY: docs-deps
-docs-deps:
-	@docker run --rm -p 3487:3487 -v "$(PWD):/usr/src/app" app/mkdocs-$(APP_NAME) deps
-
 .PHONY: docs-enter
 docs-enter:
 	docker exec -it $(APP_NAME)-serve bash
