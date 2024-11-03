@@ -15,10 +15,3 @@ updates:
     open-pull-requests-limit: 10
     labels:
       - "type: dependencies"
-  - package-ecosystem: pip
-    directory: "/_build"
-    schedule:
-      interval: daily
-    open-pull-requests-limit: 10
-    labels:
-      - "type: dependencies"
