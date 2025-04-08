@@ -39,6 +39,7 @@ sudo dokku plugin:install https://github.com/dokku/dokku-mysql.git --name mysql
 Create a new MySQL service named `bugsink-db`:
 
 ```shell
+# on your dokku host
 dokku mysql:create bugsink-db
 ```
 
@@ -48,6 +49,7 @@ Then, we create the actual application. This is the name that will be used to re
 
 
 ```shell
+# on your dokku host
 dokku apps:create bugsink
 ```
 
@@ -56,12 +58,14 @@ from source (as we are doing in this tutorial) Bugsink needs the `.dit` director
 is.
 
 ```shell
+# on your dokku host
 dokku git:set bugsink keep-git-dir true
 ```
 
 Finally, we link the database to our application:
 
 ```shell
+# on your dokku host
 dokku mysql:link bugsink-db bugsink
 ```
 
@@ -73,6 +77,7 @@ This will set the `DATABASE_URL` environment variable in your application, point
 Bugsink needs a [few more environment variables](https://www.bugsink.com/docs/settings/)
 
 ```shell
+# on your dokku host
 dokku config:set bugsink \
     CREATE_SUPERUSER=admin:SOME_SECRET_PASSWORD
     SECRET_KEY=$(openssl rand -hex 32) \
@@ -84,6 +89,7 @@ dokku config:set bugsink \
 Lets clone Bugsink locally (it's [source available](https://github.com/bugsink/bugsink/), so we can push it to our dokku server. 
 
 ```shell
+# on your local machine
 cd some-base-dir
 git clone git@github.com:bugsink/bugsink.git
 cd bugsink
@@ -94,6 +100,7 @@ dokku server is `dokku.me`. Note that the application name - `bugsink` in this c
 that dokku knows what application you are pushing.
 
 ```shell
+# on your local machine
 git remote add dokku dokku@dokku.me:bugsink
 git push dokku main
 ```
