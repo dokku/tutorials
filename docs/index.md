@@ -97,3 +97,12 @@ Hot off the release of Dokku 0.6.3, here is a sweet tutorial made possible by th
   [:octicons-arrow-right-24: Continue reading][Deploying Gogs to Dokku]
 
   [Deploying Gogs to Dokku]: apps/deploying-gogs-to-dokku.md
+
+## [Deploying Bugsink to Dokku]
+
+Bugsink is a sentry-compatible Error Tracker with a strong focus on being _very_ easy to self-host.
+The following is a tutorial on how to deploy it to Dokku.
+
+  [:octicons-arrow-right-24: Continue reading][Deploying Bugsink to Dokku]
+
+  [Deploying Bugsink to Dokku]: apps/deploying-bugsink-to-dokku.md

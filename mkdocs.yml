@@ -101,6 +101,7 @@ nav:
   - Tutorials:
     - index.md
     - Apps:
+      - apps/deploying-bugsink-to-dokku.md
       - apps/deploying-gogs-to-dokku.md
     - Automation:
       - automation/automating-dokku-setup.md
