@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY ["_build/pyproject.toml", "_build/poetry.toml", "_build/poetry.lock", "/usr/src/app/"]
 
 RUN apk add --no-cache bash build-base poetry yaml && \
-  poetry install
+  poetry install --no-root
 
 COPY _build/entrypoint /bin/entrypoint
 

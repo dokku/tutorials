@@ -1,5 +1,2 @@
-[tool.poetry]
-package-mode = false
-
 [virtualenvs]
 prompt = "null"
