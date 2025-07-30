@@ -149,7 +149,7 @@ This is pretty good so far, and uses the built-in `shell` Ansible libraries to d
         app: node-js-app
 ```
 
-The above would use a custom `dokku_app` Ansible library for provisioning applications, building upon the porcelain we covered previously. While not in the scope of this blog post, I suggest anyone interested in doing so follow along the [following tutorial](https://blog.toast38coza.me/custom-ansible-module-hello-world/).
+The above would use a custom `dokku_app` Ansible library for provisioning applications, building upon the porcelain we covered previously.
 
 > For our patreon followers, the code for the `dokku_app` library will be made available, as well as future plans around Ansible integration.
 
